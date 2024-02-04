@@ -50,6 +50,7 @@ exports.addOrder = (req, res, next) => {
         
   <h2 style="text-align:center"> A new Order</h2>
   <hr/>
+  <p> <b>State:</b> Mug Cup </p>
   <p><b> Name:</b> ${req.body.firstName} ${req.body.lastName} </p>
   <p><b> Email:</b> ${req.body.email} </p>
   <p><b> Phone:</b> ${req.body.phone} </p>
@@ -57,6 +58,8 @@ exports.addOrder = (req, res, next) => {
   <p> <b>City:</b> ${req.body.city} </p>
   <p> <b>State:</b> ${req.body.state} </p>
   <p> <b>Country:</b> ${req.body.country} </p>
+  <p> <b>Price per one:</b> ₦1500 </p>
+  <p> <b>Amount:</b> ${req.body.amount} </p>
   <p> <b>Total:</b> ₦${Number(req.body.amount) * Number(req.body.price)} </p>
   <hr/>
 
