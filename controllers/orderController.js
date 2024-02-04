@@ -50,7 +50,7 @@ exports.addOrder = (req, res, next) => {
         
   <h2 style="text-align:center"> A new Order (Dev Test)</h2>
   <hr/>
-  <p> <b>State:</b> Mug Cup </p>
+  <p> <b>Item Name:</b> Mug Cup </p>
   <p><b> Name:</b> ${req.body.firstName} ${req.body.lastName} </p>
   <p><b> Email:</b> ${req.body.email} </p>
   <p><b> Phone:</b> ${req.body.phone} </p>
