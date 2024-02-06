@@ -14,6 +14,7 @@ exports.addOrder = (req, res, next) => {
     amount: req.body.amount,
     price: req.body.price,
     country: req.body.country,
+    totalPaid: Number(req.body.price) * Number(req.body.amount),
   });
 
   const emailBody = `
