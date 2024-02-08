@@ -18,6 +18,7 @@ exports.addOrder = (req, res, next) => {
     location: req.body.location,
     item: req.body.item,
     image: req.body.image,
+    method: req.body.method,
   });
 
   const emailBody = `
@@ -66,6 +67,7 @@ exports.addOrder = (req, res, next) => {
   <p> <b>Amount:</b> ${req.body.amount} </p>
   <p> <b>Location:</b> ${req.body.location} </p>
   <p> <b>Image:</b> ${req.body.image} </p>
+  <p> <b>Delivery method:</b> ${req.body.method} </p>
   <p> <b>Total:</b> ₦${Number(req.body.amount) * Number(req.body.price)} </p>
   <hr/>
 

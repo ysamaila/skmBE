@@ -18,6 +18,7 @@ const orderSchema = mongoose.Schema(
     location: { type: String, required: false },
     item: { type: String, required: true },
     image: { type: String, required: false },
+    method: { type: String, required: true },
   },
   { timestamps: true }
 );
