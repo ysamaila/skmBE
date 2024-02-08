@@ -19,6 +19,8 @@ exports.addOrder = (req, res, next) => {
     item: req.body.item,
     image: req.body.image,
     method: req.body.method,
+    apartment: req.body.apartment || "",
+    company: req.body.company || "",
   });
 
   const emailBody = `
