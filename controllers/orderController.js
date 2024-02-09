@@ -21,6 +21,7 @@ exports.addOrder = (req, res, next) => {
     method: req.body.method,
     apartment: req.body.apartment || "",
     company: req.body.company || "",
+    transactionRef: req.body.transactionRef,
   });
 
   const emailBody = `
@@ -57,7 +58,7 @@ exports.addOrder = (req, res, next) => {
         
   <h2 style="text-align:center"> A new Order</h2>
   <hr/>
-  <p> <b>Item Name:</b>${req.body.item}</p>
+  <p> <b>Item Name:</b>${req.body.item || "Mug Cup"}</p>
   <p><b> Name:</b> ${req.body.firstName} ${req.body.lastName} </p>
   <p><b> Email:</b> ${req.body.email} </p>
   <p><b> Phone:</b> ${req.body.phone} </p>
