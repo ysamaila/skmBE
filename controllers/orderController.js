@@ -16,7 +16,7 @@ exports.addOrder = (req, res, next) => {
     country: req.body.country,
     totalPaid: Number(req.body.price) * Number(req.body.amount),
     location: req.body.location,
-    item: req.body.item,
+    item: req.body.item || "Mug Cup",
     image: req.body.image,
     method: req.body.method,
     apartment: req.body.apartment || "",
@@ -71,6 +71,7 @@ exports.addOrder = (req, res, next) => {
   <p> <b>Location:</b> ${req.body.location} </p>
   <p> <b>Image:</b> ${req.body.image} </p>
   <p> <b>Delivery method:</b> ${req.body.method} </p>
+  <p> <b>Payment Reference:</b> ${req.body.transactionRef} </p>
   <p> <b>Total:</b> ₦${Number(req.body.amount) * Number(req.body.price)} </p>
   <hr/>
 

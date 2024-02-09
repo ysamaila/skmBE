@@ -21,6 +21,7 @@ const orderSchema = mongoose.Schema(
     method: { type: String, required: true },
     apartment: { type: String, required: false },
     company: { type: String, required: false },
+    transactionRef: { type: String, required: true },
   },
   { timestamps: true }
 );
